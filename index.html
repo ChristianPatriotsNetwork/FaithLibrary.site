@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>FaithLibrary.site | Article Archive</title>
+    <title>FaithLibrary.site | Article & Art Archive</title>
     <style type="text/css">
         /* 2008 Era CSS Reset & Base */
         body {
@@ -134,25 +134,46 @@
         }
         
         /* Link Styling */
-        a {
-            color: #0000EE;
-            text-decoration: underline;
-        }
-        
-        a:visited {
-            color: #551A8B;
-        }
-        
-        a:hover {
-            color: #FF0000;
-            text-decoration: none;
-        }
+        a { color: #0000EE; text-decoration: underline; }
+        a:visited { color: #551A8B; }
+        a:hover { color: #FF0000; text-decoration: none; }
 
         .date-stamp {
             font-size: 10px;
             color: #888888;
             font-family: Tahoma, Arial, sans-serif;
             margin-left: 10px;
+        }
+
+        /* Art Gallery Specific Styling */
+        .art-gallery {
+            margin-top: 15px;
+        }
+        
+        .art-thumbnail {
+            float: left;
+            margin: 0 15px 15px 0;
+            border: 2px solid #cccccc;
+            padding: 4px;
+            background-color: #ffffff;
+        }
+
+        .art-thumbnail:hover {
+            border-color: #003366; /* Changes border to blue on hover */
+            background-color: #eef5ff;
+        }
+        
+        .art-thumbnail img {
+            width: 150px; /* Forces thumbnails to be a consistent retro size */
+            height: 150px;
+            object-fit: cover; /* Keeps images from stretching weirdly */
+            display: block;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
         
         /* Footer */
@@ -193,14 +214,13 @@
             </div>
             
             <div class="intro-text">
-                Welcome to the central reading index for <strong>FaithLibrary.site</strong>. Select a category below to browse our library of historical, scriptural, and prophetic studies.
+                Welcome to the central reading index for <strong>FaithLibrary.site</strong>. Select a category below to browse our library of historical studies, or scroll down to view the Art Archive.
             </div>
             
             <!-- Category 1 -->
             <div class="category-box">
                 <h2>Lineages &amp; Origins</h2>
                 <ul class="article-list">
-                    <!-- Your article is permanently linked here -->
                     <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical and Historical Evidence</a> <span class="date-stamp">[03/26/2026]</span></li>
                 </ul>
             </div>
@@ -209,27 +229,51 @@
             <div class="category-box">
                 <h2>Biblical History &amp; Antiquity</h2>
                 <ul class="article-list">
-                    <!-- Add future articles here by copying the format above -->
-                    
+                    <!-- Add future articles here -->
                 </ul>
             </div>
 
-            <!-- Category 3 -->
-            <div class="category-box">
-                <h2>Prophecy &amp; Fulfillment</h2>
-                <ul class="article-list">
-                    <!-- Add future articles here by copying the format above -->
+            <!-- THE NEW ART ARCHIVE SECTION -->
+            <div class="category-box clearfix">
+                <h2>My Art Archive</h2>
+                <p style="font-size: 11px; margin-top: -10px; margin-bottom: 15px; color: #666;">
+                    A collection of original artworks. Click on an image to view it in full size.
+                </p>
+                
+                <div class="art-gallery">
                     
-                </ul>
-            </div>
+                    <!-- ARTWORK 1 -->
+                    <!-- The <a> tag links to the full size image, the <img> tag shows the thumbnail -->
+                    <div class="art-thumbnail">
+                        <a href="ARTS/art1.jpg" target="_blank">
+                            <img src="ARTS/art1.jpg" alt="Artwork 1" />
+                        </a>
+                    </div>
 
-            <!-- Category 4 -->
-            <div class="category-box">
-                <h2>Manuscripts &amp; Texts</h2>
-                <ul class="article-list">
-                    <!-- Add future articles here by copying the format above -->
+                    <!-- ARTWORK 2 -->
+                    <div class="art-thumbnail">
+                        <a href="ARTS/art2.jpg" target="_blank">
+                            <img src="ARTS/art2.jpg" alt="Artwork 2" />
+                        </a>
+                    </div>
+
+                    <!-- ARTWORK 3 -->
+                    <div class="art-thumbnail">
+                        <a href="ARTS/art3.png" target="_blank">
+                            <img src="ARTS/art3.png" alt="Artwork 3" />
+                        </a>
+                    </div>
+
+                    <!-- ARTWORK 4 -->
+                    <div class="art-thumbnail">
+                        <a href="ARTS/art4.jpg" target="_blank">
+                            <img src="ARTS/art4.jpg" alt="Artwork 4" />
+                        </a>
+                    </div>
                     
-                </ul>
+                    <!-- Copy and paste the block above to add more images! Just change the file name -->
+
+                </div>
             </div>
 
         </div>
