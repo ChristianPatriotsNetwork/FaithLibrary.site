@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>FaithLibrary.site | Article & Art Archive</title>
+    <title>FaithLibrary.site | Biblical Archive & Art Gallery</title>
     <style type="text/css">
         /* 2008 Era CSS Reset & Base */
         body {
@@ -16,7 +16,6 @@
             padding: 20px 0;
         }
         
-        /* Fixed width 800px layout */
         #container {
             width: 800px;
             margin: 0 auto;
@@ -24,34 +23,17 @@
             border: 1px solid #999999;
             border-right: 3px solid #888888;
             border-bottom: 3px solid #888888;
-            padding: 0;
         }
         
-        /* Banner Header */
         #header {
             background-color: #003366;
             color: #ffffff;
             text-align: center;
             padding: 25px 20px 15px 20px;
         }
-        
-        .site-title {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #e0e0e0;
-            margin-bottom: 10px;
-        }
-        
-        h1 {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 28px;
-            margin: 0 0 10px 0;
-            font-weight: normal;
-        }
 
-        /* Top Navigation Bar */
+        .site-logo { max-width: 450px; height: auto; margin-bottom: 10px; border: 0; }
+        
         #nav-bar {
             background-color: #002244;
             border-top: 1px solid #004488;
@@ -64,119 +46,89 @@
             color: #ffffff;
             text-decoration: none;
             font-family: Arial, sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
-            margin: 0 20px;
+            margin: 0 15px;
             text-transform: uppercase;
         }
 
-        #nav-bar a:hover {
-            color: #ffff00;
-            text-decoration: underline;
-        }
+        #nav-bar a:hover { color: #ffff00; text-decoration: underline; }
         
-        /* Content Area */
-        #content {
-            padding: 30px 50px;
-        }
+        #content { padding: 25px; }
 
-        /* Personal Notification Box */
+        /* Two Column Layout */
+        .main-col { float: left; width: 510px; }
+        .side-col { float: right; width: 220px; }
+        .clearfix::after { content: ""; clear: both; display: table; }
+
+        /* Boxes */
         .notification-box {
             background-color: #ffffe6;
             border: 1px dashed #cccc99;
-            padding: 15px;
-            margin-bottom: 25px;
+            padding: 12px;
+            margin-bottom: 20px;
             text-align: center;
-            font-size: 13px;
-            color: #333333;
             font-weight: bold;
         }
 
-        .notification-box .heart {
-            color: #cc0000;
-        }
-        
-        .intro-text {
-            text-align: center;
-            font-size: 13px;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px dotted #cccccc;
-        }
-        
-        /* Category Directory Styling */
         .category-box {
             background-color: #f7f7f7;
             border: 1px solid #e0e0e0;
-            padding: 15px 25px;
-            margin-bottom: 25px;
+            padding: 15px;
+            margin-bottom: 20px;
         }
 
         .category-box h2 {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-size: 18px;
+            font-family: Georgia, serif;
+            font-size: 17px;
             color: #003366;
             border-bottom: 1px solid #cccccc;
-            padding-bottom: 5px;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        
-        ul.article-list {
-            list-style-type: square;
-            margin: 0 0 0 20px;
-            padding: 0;
-        }
-        
-        ul.article-list li {
-            margin-bottom: 10px;
-            color: #666666;
-        }
-        
-        /* Link Styling */
-        a { color: #0000EE; text-decoration: underline; }
-        a:visited { color: #551A8B; }
-        a:hover { color: #FF0000; text-decoration: none; }
-
-        .date-stamp {
-            font-size: 10px;
-            color: #888888;
-            font-family: Tahoma, Arial, sans-serif;
-            margin-left: 10px;
+            margin: 0 0 10px 0;
         }
 
-        /* Art Gallery Specific Styling */
-        .art-gallery {
-            margin-top: 15px;
+        .sidebar-box {
+            background-color: #f0f4f8;
+            border: 1px solid #b3c6d3;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 11px;
         }
-        
+
+        .sidebar-box h3 {
+            font-size: 12px;
+            color: #003366;
+            margin: 0 0 8px 0;
+            border-bottom: 1px dotted #999;
+        }
+
+        /* Scripture Box */
+        .bible-verse {
+            font-family: Georgia, serif;
+            font-style: italic;
+            background-color: #fffaf0;
+            border-left: 5px solid #d4af37;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Art Gallery */
         .art-thumbnail {
             float: left;
-            margin: 0 15px 15px 0;
-            border: 2px solid #cccccc;
-            padding: 4px;
-            background-color: #ffffff;
+            margin: 0 10px 10px 0;
+            border: 1px solid #ccc;
+            padding: 3px;
+            background: #fff;
         }
 
-        .art-thumbnail:hover {
-            border-color: #003366; /* Changes border to blue on hover */
-            background-color: #eef5ff;
-        }
-        
-        .art-thumbnail img {
-            width: 150px; /* Forces thumbnails to be a consistent retro size */
-            height: 150px;
-            object-fit: cover; /* Keeps images from stretching weirdly */
-            display: block;
-        }
+        .art-thumbnail img { width: 100px; height: 100px; object-fit: cover; }
 
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
+        /* Links */
+        a { color: #0000EE; text-decoration: underline; }
+        a:hover { color: #FF0000; text-decoration: none; }
         
-        /* Footer */
+        ul.article-list { list-style-type: square; margin-left: 20px; padding: 0; }
+        ul.article-list li { margin-bottom: 5px; }
+
         #footer {
             text-align: center;
             color: #888888;
@@ -191,97 +143,91 @@
 
     <div id="container">
         
-        <!-- Header -->
         <div id="header">
-            <div class="site-title">FaithLibrary.site</div>
-            <h1>The Biblical Archive Directory</h1>
+            <img src="FaithLibrary.site.png" alt="FaithLibrary.site Logo" class="site-logo" />
+            <h1 style="font-size: 22px; margin-top: 0;">The Biblical History &amp; Art Archive</h1>
         </div>
 
-        <!-- Navigation -->
         <div id="nav-bar">
-            <a href="index.html">Home / Articles</a>
-            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
         </div>
         
-        <!-- Main Content -->
-        <div id="content">
+        <div id="content" class="clearfix">
 
-            <!-- Personal Notification Banner -->
+            <!-- Thank You Banner -->
             <div class="notification-box">
-                Thank you so much for visiting and for supporting my journey! <span class="heart">&hearts;</span><br />
-                <span style="font-size: 11px; font-weight: normal; color: #555;">(And a special thanks for loving my art on TikTok and other socials!) :)</span>
-            </div>
-            
-            <div class="intro-text">
-                Welcome to the central reading index for <strong>FaithLibrary.site</strong>. Select a category below to browse our library of historical studies, or scroll down to view the Art Archive.
-            </div>
-            
-            <!-- Category 1 -->
-            <div class="category-box">
-                <h2>Lineages &amp; Origins</h2>
-                <ul class="article-list">
-                    <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical and Historical Evidence</a> <span class="date-stamp">[03/26/2026]</span></li>
-                </ul>
+                Thanks so much for visiting and for supporting my journey! <br />
+                <span style="font-size: 11px; font-weight: normal; color: #555;">(Thanks for loving my art on TikTok and other socials!) :)</span>
             </div>
 
-            <!-- Category 2 -->
-            <div class="category-box">
-                <h2>Biblical History &amp; Antiquity</h2>
-                <ul class="article-list">
-                    <!-- Add future articles here -->
-                </ul>
-            </div>
-
-            <!-- THE NEW ART ARCHIVE SECTION -->
-            <div class="category-box clearfix">
-                <h2>My Art Archive</h2>
-                <p style="font-size: 11px; margin-top: -10px; margin-bottom: 15px; color: #666;">
-                    A collection of original artworks. Click on an image to view it in full size.
-                </p>
+            <!-- Main Content Column -->
+            <div class="main-col">
                 
-                <div class="art-gallery">
-                    
-                    <!-- ARTWORK 1 -->
-                    <!-- The <a> tag links to the full size image, the <img> tag shows the thumbnail -->
-                    <div class="art-thumbnail">
-                        <a href="ARTS/art1.jpg" target="_blank">
-                            <img src="ARTS/art1.jpg" alt="Artwork 1" />
-                        </a>
-                    </div>
-
-                    <!-- ARTWORK 2 -->
-                    <div class="art-thumbnail">
-                        <a href="ARTS/art2.jpg" target="_blank">
-                            <img src="ARTS/art2.jpg" alt="Artwork 2" />
-                        </a>
-                    </div>
-
-                    <!-- ARTWORK 3 -->
-                    <div class="art-thumbnail">
-                        <a href="ARTS/art3.png" target="_blank">
-                            <img src="ARTS/art3.png" alt="Artwork 3" />
-                        </a>
-                    </div>
-
-                    <!-- ARTWORK 4 -->
-                    <div class="art-thumbnail">
-                        <a href="ARTS/art4.jpg" target="_blank">
-                            <img src="ARTS/art4.jpg" alt="Artwork 4" />
-                        </a>
-                    </div>
-                    
-                    <!-- Copy and paste the block above to add more images! Just change the file name -->
-
+                <div class="bible-verse">
+                    "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding." 
+                    <br /><small>— Proverbs 4:7 (KJV)</small>
                 </div>
+
+                <div class="category-box">
+                    <h2>Article Directory</h2>
+                    <ul class="article-list">
+                        <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical and Historical Evidence</a></li>
+                        <!-- New articles will be linked here as they are created -->
+                    </ul>
+                </div>
+
+                <div class="category-box clearfix">
+                    <h2>Art Archive</h2>
+                    <div class="art-thumbnail"><a href="ARTS/art1.jpg" target="_blank"><img src="ARTS/art1.jpg" alt="Art" /></a></div>
+                    <div class="art-thumbnail"><a href="ARTS/art2.jpg" target="_blank"><img src="ARTS/art2.jpg" alt="Art" /></a></div>
+                    <div class="art-thumbnail"><a href="ARTS/art3.png" target="_blank"><img src="ARTS/art3.png" alt="Art" /></a></div>
+                    <div class="art-thumbnail"><a href="ARTS/art4.jpg" target="_blank"><img src="ARTS/art4.jpg" alt="Art" /></a></div>
+                    <p style="clear:both; font-size: 10px; padding-top: 5px; color: #666;"><em>Click images to view full size.</em></p>
+                </div>
+
+                <div class="category-box">
+                    <h2>Mission Statement</h2>
+                    <p style="font-size: 11px;">Our goal is to preserve and present the deep roots of biblical history. By combining scripture with archaeology, linguistics, and genealogy, we seek to provide a library of truth for those who are searching. This site is a labor of love and a record of my personal journey into the Word.</p>
+                </div>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="side-col">
+                
+                <div class="sidebar-box">
+                    <h3>Recent Updates</h3>
+                    <strong>March 2026</strong><br />
+                    - Launched the Art Archive section!<br />
+                    - New Article: Japheth of Europe.<br />
+                    - Site theme updated to v2.0.
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Social Media</h3>
+                    &raquo; <a href="https://www.tiktok.com/@bozydar.v2" target="_blank">TikTok Profile</a><br />
+                    &raquo; <a href="https://x.com/BozReich" target="_blank">X / Twitter</a>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Study Resources</h3>
+                    - <a href="https://www.blueletterbible.org/" target="_blank">Blue Letter Bible</a><br />
+                    - <a href="http://penelope.uchicago.edu/josephus/" target="_blank">Josephus Online</a><br />
+                    - <a href="https://www.biblehub.com/strongs.htm" target="_blank">Strong's Concordance</a>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Support the Journey</h3>
+                    <p>If you find value in my work, consider sharing the link or reaching out via the contact page.</p>
+                </div>
+
             </div>
 
         </div>
         
-        <!-- Footer -->
         <div id="footer">
             Copyright &copy; 2026 FaithLibrary.site &mdash; All Rights Reserved.<br />
-            <br />
             <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="disclaimer.html">Disclaimer</a>
         </div>
         
