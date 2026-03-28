@@ -1,3 +1,5 @@
+--- START OF FILE index.html ---
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -129,6 +131,9 @@
         ul.article-list { list-style-type: square; margin-left: 20px; padding: 0; }
         ul.article-list li { margin-bottom: 5px; }
 
+        /* Coming Soon Styling */
+        .coming-soon { color: #777777; font-style: italic; }
+
         #footer {
             text-align: center;
             color: #888888;
@@ -137,7 +142,44 @@
             border-top: 1px solid #e0e0e0;
             background-color: #f9f9f9;
         }
+
+        /* Search Input Styling */
+        .search-input {
+            border: 1px solid #999;
+            font-size: 11px;
+            padding: 3px;
+            width: 120px;
+            vertical-align: middle;
+        }
+        .search-btn {
+            font-size: 11px;
+            background: #eee;
+            border: 1px solid #666;
+            cursor: pointer;
+            vertical-align: middle;
+            font-weight: bold;
+        }
     </style>
+
+    <script type="text/javascript">
+        // Real-time keyword filter function
+        function filterArchive() {
+            var input = document.getElementById('searchQuery');
+            var filter = input.value.toUpperCase();
+            var ul = document.getElementById("articleDirectory");
+            var li = ul.getElementsByTagName('li');
+
+            for (var i = 0; i < li.length; i++) {
+                var text = li[i].textContent || li[i].innerText;
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+            return false; // Prevent form from refreshing page
+        }
+    </script>
 </head>
 <body>
 
@@ -170,14 +212,15 @@
                     <br /><small>— Proverbs 4:7 (KJV)</small>
                 </div>
 
-                        <div class="category-box">
-                            <h2>Article Directory</h2>
-                            <ul class="article-list">
-                                <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical and Historical Evidence</a></li>
-                                <!-- New article added below -->
-                                <li><a href="Jesuswhite.html">Jesus Was White: Understanding the history behind it</a></li>
-                            </ul>
-                        </div>                  
+                <div class="category-box">
+                    <h2>Article Directory</h2>
+                    <ul class="article-list" id="articleDirectory">
+                        <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical and Historical Evidence</a></li>
+                        <li><a href="Jesuswhite.html">Jesus Was White: Understanding the history behind it</a></li>
+                        <!-- New "Coming Soon" Article -->
+                        <li class="coming-soon">Coming Soon: Why Jesus Opposed the Jews: Lessons from the Gospels — Biblical Evidence</li>
+                    </ul>
+                </div>                  
 
                 <div class="category-box clearfix">
                     <h2>Art Archive</h2>
@@ -197,12 +240,22 @@
             <!-- Sidebar Column -->
             <div class="side-col">
                 
+                <!-- Updated Search Box that "Really Works" -->
+                <div class="sidebar-box">
+                    <h3>Search Archive</h3>
+                    <form onsubmit="return filterArchive();" action="#">
+                        <input type="text" id="searchQuery" class="search-input" value="Keyword..." onfocus="if(this.value=='Keyword...')this.value='';" onkeyup="filterArchive()" />
+                        <input type="submit" value="Go" class="search-btn" />
+                    </form>
+                    <p style="font-size: 9px; color: #666; margin-top: 5px;">Search articles by name or topic.</p>
+                </div>
+
                 <div class="sidebar-box">
                     <h3>Recent Updates</h3>
                     <strong>March 2026</strong><br />
                     - Launched the Art Archive section!<br />
-                    - New Article: Jesus is White.<br />
-                    - Site theme updated to v2.0.
+                    - New Article: Japheth of Europe.<br />
+                    - Search functionality added.
                 </div>
 
                 <div class="sidebar-box">
