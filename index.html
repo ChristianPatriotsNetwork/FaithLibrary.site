@@ -17,29 +17,30 @@
         }
         
         #container {
-            width: 800px;
+            width: 820px;
             margin: 0 auto;
             background-color: #ffffff;
             border: 1px solid #999999;
-            border-right: 3px solid #888888;
-            border-bottom: 3px solid #888888;
+            border-right: 4px solid #666666;
+            border-bottom: 4px solid #666666;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
         #header {
             background-color: #003366;
             color: #ffffff;
             text-align: center;
-            padding: 25px 20px 15px 20px;
+            padding: 40px 20px;
+            border-bottom: 6px solid #d4af37;
         }
 
-        .site-logo { max-width: 450px; height: auto; margin-bottom: 10px; border: 0; }
+        .site-logo { max-width: 480px; height: auto; margin-bottom: 5px; }
         
         #nav-bar {
             background-color: #002244;
-            border-top: 1px solid #004488;
-            border-bottom: 5px solid #d4af37;
             text-align: center;
-            padding: 8px 0;
+            padding: 12px 0;
+            border-bottom: 1px solid #000;
         }
 
         #nav-bar a {
@@ -48,125 +49,159 @@
             font-family: Arial, sans-serif;
             font-size: 11px;
             font-weight: bold;
-            margin: 0 15px;
+            margin: 0 18px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         #nav-bar a:hover { color: #ffff00; text-decoration: underline; }
         
-        #content { padding: 25px; }
+        #content { padding: 30px; background-color: #fffef9; } /* Slight cream tint for paper feel */
 
-        /* Two Column Layout */
-        .main-col { float: left; width: 510px; }
+        .main-col { float: left; width: 520px; }
         .side-col { float: right; width: 220px; }
         .clearfix::after { content: ""; clear: both; display: table; }
 
-        /* Boxes */
-        .notification-box {
-            background-color: #ffffe6;
-            border: 1px dashed #cccc99;
-            padding: 12px;
-            margin-bottom: 20px;
+        /* THE SYMBOL: ARCHIVE SEAL (Refined) */
+        .archive-seal-box {
+            background-color: #fff;
+            border: 2px solid #d4af37;
+            padding: 20px;
             text-align: center;
+            margin-bottom: 25px;
+            outline: 1px solid #333;
+            outline-offset: -5px;
+        }
+        .archive-seal-box img {
+            width: 160px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        .seal-title {
+            font-family: Georgia, serif;
             font-weight: bold;
+            font-size: 11px;
+            color: #003366;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .category-box {
-            background-color: #f7f7f7;
-            border: 1px solid #e0e0e0;
-            padding: 15px;
-            margin-bottom: 20px;
+        /* INSPIRATIONAL QUOTE BOX (Carved Stone Look) */
+        .inspiration-box {
+            background-color: #f4f1ea;
+            border-top: 4px solid #d4af37;
+            border-bottom: 4px solid #d4af37;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
         }
-
-        .category-box h2 {
+        .inspiration-text {
             font-family: Georgia, serif;
             font-size: 17px;
+            line-height: 1.6;
+            color: #2c2c2c;
+            font-style: italic;
+            text-shadow: 1px 1px 0px #fff;
+        }
+        .quote-marks {
+            color: #d4af37;
+            font-size: 40px;
+            font-family: Georgia, serif;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        /* Category Boxes */
+        .category-box {
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 2px 2px 0px #f0f0f0;
+        }
+        .category-box h2 {
+            font-family: Georgia, serif;
+            font-size: 18px;
             color: #003366;
-            border-bottom: 1px solid #cccccc;
-            margin: 0 0 10px 0;
+            border-bottom: 2px solid #003366;
+            margin: 0 0 15px 0;
+            padding-bottom: 5px;
         }
 
         .sidebar-box {
-            background-color: #f0f4f8;
-            border: 1px solid #b3c6d3;
-            padding: 12px;
-            margin-bottom: 20px;
+            background-color: #f7f9fb;
+            border: 1px solid #cbd5e0;
+            padding: 15px;
+            margin-bottom: 25px;
             font-size: 11px;
         }
-
         .sidebar-box h3 {
             font-size: 12px;
             color: #003366;
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
             border-bottom: 1px dotted #999;
+            text-transform: uppercase;
         }
 
-        /* Scripture Box */
-        .bible-verse {
-            font-family: Georgia, serif;
-            font-style: italic;
-            background-color: #fffaf0;
-            border-left: 5px solid #d4af37;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Art Gallery */
+        /* Art Archive Styling */
         .art-thumbnail {
             float: left;
-            margin: 0 10px 10px 0;
+            margin: 0 12px 12px 0;
             border: 1px solid #ccc;
-            padding: 3px;
+            padding: 4px;
             background: #fff;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
+        .art-thumbnail img { width: 105px; height: 105px; object-fit: cover; cursor: pointer; }
+        .art-thumbnail:hover { border-color: #d4af37; }
 
-        .art-thumbnail img { width: 100px; height: 100px; object-fit: cover; }
-
-        /* Links */
-        a { color: #0000EE; text-decoration: underline; }
-        a:hover { color: #FF0000; text-decoration: none; }
-        
-        ul.article-list { list-style-type: square; margin-left: 20px; padding: 0; }
-        ul.article-list li { margin-bottom: 5px; }
-
-        /* Coming Soon Styling */
-        .coming-soon { color: #777777; font-style: italic; }
+        /* Lightbox Overlay */
+        #lightbox-overlay {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.92);
+            text-align: center;
+        }
+        #lightbox-img { max-width: 90%; max-height: 85%; margin-top: 40px; border: 8px solid #fff; }
 
         #footer {
             text-align: center;
-            color: #888888;
+            color: #777;
             font-size: 10px;
-            padding: 20px;
+            padding: 30px;
             border-top: 1px solid #e0e0e0;
             background-color: #f9f9f9;
         }
 
-        /* Search Input Styling */
-        .search-input {
-            border: 1px solid #999;
-            font-size: 11px;
-            padding: 3px;
-            width: 120px;
-            vertical-align: middle;
+        .search-input { border: 1px solid #999; font-size: 11px; padding: 5px; width: 140px; }
+        .search-btn { font-size: 11px; background: #003366; color: #fff; border: none; padding: 5px 10px; cursor: pointer; font-weight: bold; }
+        
+        ul.article-list { list-style: none; margin: 0; padding: 0; }
+        ul.article-list li { 
+            padding: 8px 0; 
+            border-bottom: 1px solid #f0f0f0; 
+            background-image: url('data:image/gif;base64,R0lGODlhBAAEAIAAALu7u////yH5BAAAAAAALAAAAAAEAAQAAAIEhI8JBQA7'); 
+            background-repeat: no-repeat; 
+            background-position: 0 center; 
+            padding-left: 15px; 
         }
-        .search-btn {
-            font-size: 11px;
-            background: #eee;
-            border: 1px solid #666;
-            cursor: pointer;
-            vertical-align: middle;
-            font-weight: bold;
-        }
+        ul.article-list li a { font-weight: bold; color: #003366; text-decoration: none; }
+        ul.article-list li a:hover { color: #cc0000; text-decoration: underline; }
     </style>
 
     <script type="text/javascript">
-        // Real-time keyword filter function
         function filterArchive() {
             var input = document.getElementById('searchQuery');
             var filter = input.value.toUpperCase();
             var ul = document.getElementById("articleDirectory");
             var li = ul.getElementsByTagName('li');
-
             for (var i = 0; i < li.length; i++) {
                 var text = li[i].textContent || li[i].innerText;
                 if (text.toUpperCase().indexOf(filter) > -1) {
@@ -175,7 +210,14 @@
                     li[i].style.display = "none";
                 }
             }
-            return false; // Prevent form from refreshing page
+            return false;
+        }
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-overlay').style.display = 'block';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox-overlay').style.display = 'none';
         }
     </script>
 </head>
@@ -184,8 +226,8 @@
     <div id="container">
         
         <div id="header">
-            <img src="FaithLibrary.site.png" alt="FaithLibrary.site Logo" class="site-logo" />
-            <h1 style="font-size: 22px; margin-top: 0;">The Biblical History &amp; Art Archive</h1>
+            <img src="FaithLibrary.site.png" alt="FaithLibrary.site Logo" class="site-logo" /><br />
+            <h1 style="font-size: 26px; margin: 0; font-family: Georgia, serif; letter-spacing: 1px;">Faith Library &amp; Historical Archive</h1>
         </div>
 
         <div id="nav-bar">
@@ -196,83 +238,82 @@
         
         <div id="content" class="clearfix">
 
-            <!-- Thank You Banner -->
-            <div class="notification-box">
-                Thanks so much for visiting and for supporting my journey! <br />
-                <span style="font-size: 11px; font-weight: normal; color: #555;">(Thanks for loving my art on TikTok and other socials!) :)</span>
-            </div>
-
             <!-- Main Content Column -->
             <div class="main-col">
                 
-                <div class="bible-verse">
-                    "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding." 
-                    <br /><small>— Proverbs 4:7 (KJV)</small>
+                <!-- THE INSPIRATIONAL QUOTE BOX -->
+                <div class="inspiration-box">
+                    <span class="quote-marks">&ldquo;</span>
+                    <div class="inspiration-text">
+                        "Remember your forefather, Japheth. Understand who built it for you, Japheth. Why are we here? Because God gave Japheth the power to make Europe an amazing place."
+                    </div>
                 </div>
 
                 <div class="category-box">
-                    <h2>Article Directory</h2>
+                    <h2>Archival Index: Articles</h2>
                     <ul class="article-list" id="articleDirectory">
-                        <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical and Historical Evidence</a></li>
+                        <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical Evidence</a></li>
                         <li><a href="Jesuswhite.html">Jesus Was White: Understanding the history behind it</a></li>
-                        <li><a href="Jesusandjews.html">Why Jesus Opposed the Jews: Lessons from the Gospels — Biblical Evidence</a></li>
-                        <!-- New "Coming Soon" Article -->
-                        <li class="coming-soon">Coming Soon: Was Adam Really the First White Man? — Biblical Evidence</li>
+                        <li><a href="Jesusandjews.html">Why Jesus Opposed the Jews: Lessons from the Gospels</a></li>
+                        <li style="color: #999; font-style: italic; background-image: none;">Archived Note: Was Adam Really the First White Man? (Coming Soon)</li>
                     </ul>
                 </div>                  
 
                 <div class="category-box clearfix">
-                    <h2>Art Archive</h2>
-                    <div class="art-thumbnail"><a href="ARTS/art1.jpg" target="_blank"><img src="ARTS/art1.jpg" alt="Art" /></a></div>
-                    <div class="art-thumbnail"><a href="ARTS/art2.jpg" target="_blank"><img src="ARTS/art2.jpg" alt="Art" /></a></div>
-                    <div class="art-thumbnail"><a href="ARTS/art3.png" target="_blank"><img src="ARTS/art3.png" alt="Art" /></a></div>
-                    <div class="art-thumbnail"><a href="ARTS/art4.jpg" target="_blank"><img src="ARTS/art4.jpg" alt="Art" /></a></div>
-                    <p style="clear:both; font-size: 10px; padding-top: 5px; color: #666;"><em>Click images to view full size.</em></p>
+                    <h2>Visual Records: Art Archive</h2>
+                    <div class="art-thumbnail"><img src="ARTS/art1.jpg" onclick="openLightbox(this.src)" /></div>
+                    <div class="art-thumbnail"><img src="ARTS/art2.jpg" onclick="openLightbox(this.src)" /></div>
+                    <div class="art-thumbnail"><img src="ARTS/art3.png" onclick="openLightbox(this.src)" /></div>
+                    <div class="art-thumbnail"><img src="ARTS/art4.jpg" onclick="openLightbox(this.src)" /></div>
+                    <p style="clear:both; font-size: 10px; padding-top: 8px; color: #777;"><em>Click artifacts to expand to high-resolution view.</em></p>
                 </div>
 
                 <div class="category-box">
-                    <h2>Mission Statement</h2>
-                    <p style="font-size: 11px;">Our goal is to preserve and present the deep roots of biblical history. By combining scripture with archaeology, linguistics, and genealogy, we seek to provide a library of truth for those who are searching. This site is a labor of love and a record of my personal journey into the Word.</p>
+                    <h2>Research Glossary</h2>
+                    <p style="font-size: 11px; line-height: 1.8;">
+                        <strong>Table of Nations:</strong> The genealogical record of post-flood human dispersion.<br />
+                        <strong>Patriarch:</strong> The male head of a family or tribe in biblical history.<br />
+                        <strong>Veritas:</strong> The Latin word for Truth, the core goal of this Archive.
+                    </p>
                 </div>
+
             </div>
 
             <!-- Sidebar Column -->
             <div class="side-col">
+
+                <!-- PROMINENT ARCHIVE SEAL (Refined & Large) -->
+                <div class="archive-seal-box">
+                    <img src="cross_highres%20(black%20+%20sun).png" alt="Official Seal" />
+                    <div class="seal-title">Official Seal</div>
+                    <div style="font-size: 9px; color: #d4af37; font-weight: bold; margin-top: 5px;">ARCHIVE AUTHENTICITY VERIFIED</div>
+                </div>
                 
-                <!-- Updated Search Box that "Really Works" -->
                 <div class="sidebar-box">
-                    <h3>Search Archive</h3>
+                    <h3>Library Search</h3>
                     <form onsubmit="return filterArchive();" action="#">
                         <input type="text" id="searchQuery" class="search-input" value="Keyword..." onfocus="if(this.value=='Keyword...')this.value='';" onkeyup="filterArchive()" />
-                        <input type="submit" value="Go" class="search-btn" />
+                        <div style="margin-top: 5px;"><input type="submit" value="Search Records" class="search-btn" /></div>
                     </form>
-                    <p style="font-size: 9px; color: #666; margin-top: 5px;">Search articles by name or topic.</p>
                 </div>
 
                 <div class="sidebar-box">
-                    <h3>Recent Updates</h3>
+                    <h3>Latest Records</h3>
                     <strong>March 2026</strong><br />
-                    - Launched the Art Archive section!<br />
-                    - New Article: Japheth of Europe.<br />
-                    - Search functionality added.
+                    - Archive plaque updated.<br />
+                    - Glossary of terms active.<br />
+                    - Visual gallery operational.
                 </div>
 
                 <div class="sidebar-box">
-                    <h3>Social Media</h3>
-                    &raquo; <a href="https://www.tiktok.com/@bozydar.v2" target="_blank">TikTok Profile</a><br />
-                    &raquo; <a href="https://x.com/BozReich" target="_blank">X / Twitter</a>
+                    <h3>Correspondence</h3>
+                    &raquo; <a href="https://www.tiktok.com/@bozydar.v2" target="_blank">TikTok Archive</a><br />
+                    &raquo; <a href="https://x.com/BozReich" target="_blank">Twitter / X</a>
                 </div>
 
                 <div class="sidebar-box">
-                    <h3>Study Resources</h3>
-                    - <a href="https://www.blueletterbible.org/" target="_blank">Blue Letter Bible</a><br />
-                    - <a href="http://penelope.uchicago.edu/josephus/" target="_blank">Josephus Online</a><br />
-                    - <a href="https://www.biblehub.com/strongs.htm" target="_blank">Strong's Concordance</a>
-                </div>
-
-                <div class="sidebar-box">
-                    <h3>Support the Journey</h3>
-                    <p>If you find value in my work, consider sharing the link or reaching out via the contact page.</p>
+                    <h3>Archive Mission</h3>
+                    <p>Dedicated to the preservation of independent research regarding biblical identity and history.</p>
                 </div>
 
             </div>
@@ -280,10 +321,16 @@
         </div>
         
         <div id="footer">
-            Copyright &copy; 2026 FaithLibrary.site &mdash; All Rights Reserved.<br />
-            <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="disclaimer.html">Disclaimer</a>
+            Copyright &copy; 2026 FaithLibrary.site &mdash; Proclaiming Historical Truth.<br />
+            <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact</a>
         </div>
         
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox-overlay" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full view" />
+        <p style="color: #fff; font-size: 12px; margin-top: 20px; font-family: Arial;">CLICK ANYWHERE TO CLOSE GALLERY</p>
     </div>
 
 </body>
