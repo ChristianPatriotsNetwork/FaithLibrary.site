@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>FaithLibrary.site | Biblical Archive & Art Gallery</title>
+    <title>Faith Library | Biblical History & Heritage</title>
     <style type="text/css">
         /* 2008 Era CSS Reset & Base */
         body {
@@ -56,38 +56,13 @@
 
         #nav-bar a:hover { color: #ffff00; text-decoration: underline; }
         
-        #content { padding: 30px; background-color: #fffef9; } /* Slight cream tint for paper feel */
+        #content { padding: 30px; background-color: #fffef9; } 
 
         .main-col { float: left; width: 520px; }
         .side-col { float: right; width: 220px; }
         .clearfix::after { content: ""; clear: both; display: table; }
 
-        /* THE SYMBOL: ARCHIVE SEAL (Refined) */
-        .archive-seal-box {
-            background-color: #fff;
-            border: 2px solid #d4af37;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 25px;
-            outline: 1px solid #333;
-            outline-offset: -5px;
-        }
-        .archive-seal-box img {
-            width: 160px;
-            height: auto;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-        }
-        .seal-title {
-            font-family: Georgia, serif;
-            font-weight: bold;
-            font-size: 11px;
-            color: #003366;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* INSPIRATIONAL QUOTE BOX (Carved Stone Look) */
+        /* INSPIRATIONAL QUOTE BOX */
         .inspiration-box {
             background-color: #f4f1ea;
             border-top: 4px solid #d4af37;
@@ -147,30 +122,6 @@
             text-transform: uppercase;
         }
 
-        /* Art Archive Styling */
-        .art-thumbnail {
-            float: left;
-            margin: 0 12px 12px 0;
-            border: 1px solid #ccc;
-            padding: 4px;
-            background: #fff;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-        }
-        .art-thumbnail img { width: 105px; height: 105px; object-fit: cover; cursor: pointer; }
-        .art-thumbnail:hover { border-color: #d4af37; }
-
-        /* Lightbox Overlay */
-        #lightbox-overlay {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.92);
-            text-align: center;
-        }
-        #lightbox-img { max-width: 90%; max-height: 85%; margin-top: 40px; border: 8px solid #fff; }
-
         #footer {
             text-align: center;
             color: #777;
@@ -212,13 +163,6 @@
             }
             return false;
         }
-        function openLightbox(imgSrc) {
-            document.getElementById('lightbox-img').src = imgSrc;
-            document.getElementById('lightbox-overlay').style.display = 'block';
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox-overlay').style.display = 'none';
-        }
     </script>
 </head>
 <body>
@@ -227,7 +171,7 @@
         
         <div id="header">
             <img src="FaithLibrary.site.png" alt="FaithLibrary.site Logo" class="site-logo" /><br />
-            <h1 style="font-size: 26px; margin: 0; font-family: Georgia, serif; letter-spacing: 1px;">Faith Library &amp; Historical Archive</h1>
+            <h1 style="font-size: 26px; margin: 0; font-family: Georgia, serif; letter-spacing: 1px;">Faith Library: Biblical History &amp; Heritage</h1>
         </div>
 
         <div id="nav-bar">
@@ -241,7 +185,6 @@
             <!-- Main Content Column -->
             <div class="main-col">
                 
-                <!-- THE INSPIRATIONAL QUOTE BOX -->
                 <div class="inspiration-box">
                     <span class="quote-marks">&ldquo;</span>
                     <div class="inspiration-text">
@@ -250,31 +193,22 @@
                 </div>
 
                 <div class="category-box">
-                    <h2>Archival Index: Articles</h2>
+                    <h2>Educational Articles &amp; Resources</h2>
                     <ul class="article-list" id="articleDirectory">
-                        <li><a href="whitejapheth.html">Japheth: The White Aryan Father of Europe — Biblical Evidence</a></li>
-                        <li><a href="Jesuswhite.html">Jesus Was White: Understanding the history behind it</a></li>
-                        <li><a href="Jesusandjews.html">Why Jesus Opposed the Jews: Lessons from the Gospels</a></li>
-                        <li><a href="islampaganism.html">Islam is pure paganism — Biblical, Historical, Archaeological, Linguistic & Prophetic Proof</a></li>
-                        <li style="color: #999; font-style: italic; background-image: none;">Archived Note: Was Adam Really the First White Man? (Coming Soon)</li>
+                        <li><a href="whitejapheth.html">Japheth: The Father of Europe — Biblical Evidence</a></li>
+                        <li><a href="Jesuswhite.html">Historical Perspectives on the Appearance of Jesus</a></li>
+                        <li><a href="Jesusandjews.html">Lessons from the Gospels: Jesus and Jews</a></li>
+                        <li><a href="islampaganism.html">Historical and Biblical Roots: Islam's Paganism</a></li>
+                        <li style="color: #999; font-style: italic; background-image: none;">Coming Soon: Exploring the Origins of Ancient Families</li>
                     </ul>
                 </div>                  
 
-                <div class="category-box clearfix">
-                    <h2>Visual Records: Art Archive</h2>
-                    <div class="art-thumbnail"><img src="ARTS/art1.jpg" onclick="openLightbox(this.src)" /></div>
-                    <div class="art-thumbnail"><img src="ARTS/art2.jpg" onclick="openLightbox(this.src)" /></div>
-                    <div class="art-thumbnail"><img src="ARTS/art3.png" onclick="openLightbox(this.src)" /></div>
-                    <div class="art-thumbnail"><img src="ARTS/art4.jpg" onclick="openLightbox(this.src)" /></div>
-                    <p style="clear:both; font-size: 10px; padding-top: 8px; color: #777;"><em>Click artifacts to expand to high-resolution view.</em></p>
-                </div>
-
                 <div class="category-box">
-                    <h2>Research Glossary</h2>
+                    <h2>Understanding Historical Terms</h2>
                     <p style="font-size: 11px; line-height: 1.8;">
-                        <strong>Table of Nations:</strong> The genealogical record of post-flood human dispersion.<br />
-                        <strong>Patriarch:</strong> The male head of a family or tribe in biblical history.<br />
-                        <strong>Veritas:</strong> The Latin word for Truth, the core goal of this Archive.
+                        <strong>Table of Nations:</strong> A historical record of how families spread across the world after the flood.<br />
+                        <strong>Patriarch:</strong> A term used for the respected fathers and leaders in ancient biblical history.<br />
+                        <strong>Veritas:</strong> A Latin word meaning Truth, representing our commitment to honest study.
                     </p>
                 </div>
 
@@ -282,39 +216,31 @@
 
             <!-- Sidebar Column -->
             <div class="side-col">
-
-                <!-- PROMINENT ARCHIVE SEAL (Refined & Large) -->
-                <div class="archive-seal-box">
-                    <img src="cross_highres%20(black%20+%20sun).png" alt="Official Seal" />
-                    <div class="seal-title">Official Seal</div>
-                    <div style="font-size: 9px; color: #d4af37; font-weight: bold; margin-top: 5px;">ARCHIVE AUTHENTICITY VERIFIED</div>
-                </div>
                 
                 <div class="sidebar-box">
-                    <h3>Library Search</h3>
+                    <h3>Search the Library</h3>
                     <form onsubmit="return filterArchive();" action="#">
                         <input type="text" id="searchQuery" class="search-input" value="Keyword..." onfocus="if(this.value=='Keyword...')this.value='';" onkeyup="filterArchive()" />
-                        <div style="margin-top: 5px;"><input type="submit" value="Search Records" class="search-btn" /></div>
+                        <div style="margin-top: 5px;"><input type="submit" value="Search Articles" class="search-btn" /></div>
                     </form>
                 </div>
 
                 <div class="sidebar-box">
-                    <h3>Latest Records</h3>
+                    <h3>Recent Updates</h3>
                     <strong>March 2026</strong><br />
-                    - Archive plaque updated.<br />
-                    - Glossary of terms active.<br />
-                    - Visual gallery operational.
+                    - Website navigation improved.<br />
+                    - New definitions added to glossary.<br />
+                    - Article directory updated for easier reading.
                 </div>
 
                 <div class="sidebar-box">
-                    <h3>Correspondence</h3>
-                    &raquo; <a href="https://www.tiktok.com/@bozydar.v2" target="_blank">TikTok Archive</a><br />
-                    &raquo; <a href="https://x.com/BozReich" target="_blank">Twitter / X</a>
+                    <h3>Our Goal</h3>
+                    <p>We are dedicated to providing clear, educational articles for everyone interested in learning about biblical history and our shared heritage.</p>
                 </div>
 
                 <div class="sidebar-box">
-                    <h3>Archive Mission</h3>
-                    <p>Dedicated to the preservation of independent research regarding biblical identity and history.</p>
+                    <h3>Contact</h3>
+                    <p>Questions or research inquiries? Visit our <a href="contact.html">Contact Page</a> to reach our team via email.</p>
                 </div>
 
             </div>
@@ -322,16 +248,10 @@
         </div>
         
         <div id="footer">
-            Copyright &copy; 2026 FaithLibrary.site &mdash; Proclaiming Historical Truth.<br />
+            Copyright &copy; 2026 FaithLibrary.site &mdash; Dedicated to Biblical Education.<br />
             <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact</a>
         </div>
         
-    </div>
-
-    <!-- Lightbox Overlay -->
-    <div id="lightbox-overlay" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Full view" />
-        <p style="color: #fff; font-size: 12px; margin-top: 20px; font-family: Arial;">CLICK ANYWHERE TO CLOSE GALLERY</p>
     </div>
 
 </body>
